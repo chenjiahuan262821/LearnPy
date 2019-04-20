@@ -5,7 +5,7 @@
 
 写在最前：
 
-最近，在唐亮哥哥的怂恿下，决定好好利用github~找到廖雪峰的git教程，学习一下最最基本的用法——**创建仓库repository、把文件添加到仓库里面、文件管理修改以及版本进退、远程仓库与克隆。**
+最近，在唐亮哥哥的怂恿下，决定好好利用github~找到廖雪峰的git教程，学习一下最最基本的用法——**创建仓库repository、把文件添加到仓库里面、文件管理修改以及版本进退、远程仓库与克隆、创建与合并分支。**
 
 ---
 
@@ -37,9 +37,10 @@
 
 按照教程，编写一个readme.txt文件，放在LearnPy的目录下。随后，通过**git add**命令将文件添加到对应的仓库。此时，通过**git commit**将文件提交到仓库，跟-m"describe what you did"描述这次提交的内容或意图等说明情况。
 	
-	git add readme.txt #把工作区里的一个或多个文件添加到暂存区，比如git add AA.py BB.md CC.txt
+	git add readme.txt #把工作区里的一个或多个文件添加到暂存区
 	git commit -m"created a new repo and wrote a readme file" #把暂存区的文件添加到repo并作说明以便追踪与管理
 
+*关于git add: 后面可以跟多个文件（比如git add AA.py BB.md CC.txt）；也可以跟文件夹（比如git add file/）；也可以是当前目录下的所有东西（git add .）*
 
 **3. 文件管理修改以及版本进退**
 
@@ -144,12 +145,38 @@
 
 3）把远程仓库克隆到本地，先cd到合适的目录，使用**git clone**可以了。
 
+**5.创建与合并分支**
+
+以上，都是在使用仓库内仅有的master分支，这是仓库的主分支，十分重要，而当多人协作的时候总不能大家同时都修改这一分支吧，所以创建额外的分支也十分重要。
+
+	git checkout -b source #创建source分支并切换到source分支，自己创建的分支可以随意命名
+	git branch #查看当前分支，命令会返回所有分支并在当前分支前面会标一个*号
+
+现在已经创建并且切换到source分支了，后续可以通过git add、git commit进行操作，将本地工作区的文件上传到分支source上。
+
+接下去，就看是要保存这个分支还是要合并到master上了。
+
+（1）如果是要保存这个分支并上传到远程github仓库：
+	
+	git push origin source #上传到远程的source分支
+
+（2）如果是要合并到master上并且不要这个source分支了：
+	
+	git checkout master #切换回master分支
+	git merge source #将source分支的内容合并到master分支上
+	git branch -d source #将source分支删除，它完成使命了
+
+
+小总结：
+
+查看分支：git branch；创建分支source：git branch source；切换分支：git checkout source；创建并切换分支：git checkout -b source；合并分支source到当前分支：git merge source；删除分支source：git branch -d source；将分支source推送到远程：git push origin source。
+
 ---
 
 
 至此，这些基本功能应该能够满足我的需求了。
 
-要继续去学CFA了，接下去的日子一定要好好努力阿！
+要继续去学CFA了，接下去的日子一定要好好努力阿！冲鸭！
 
 
 

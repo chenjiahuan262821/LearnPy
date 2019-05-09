@@ -93,7 +93,7 @@ while循环通过一个能够产生或转换出bool值的表达式来控制循�
 	x = int(input('x = '))
 	y = int(input('y = '))
 	if x > y:
-	    x, y = y, x
+	    x, y = y, x #让x是小的那个数
 	for factor in range(x, 0, -1):
 	    if x % factor == 0 and y % factor == 0:
 	        print('%d和%d的最大公约数是%d' % (x, y, factor))

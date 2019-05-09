@@ -97,5 +97,5 @@ while循环通过一个能够产生或转换出bool值的表达式来控制循�
 	for factor in range(x, 0, -1):
 	    if x % factor == 0 and y % factor == 0:
 	        print('%d和%d的最大公约数是%d' % (x, y, factor))
-	        print('%d和%d的最小公倍数是%d' % (x, y, x * y //factor))
+	        print('%d和%d的最小公倍数是%d' % (x, y, x * y //factor))  #这个//是商取整数部份的意思
         	break

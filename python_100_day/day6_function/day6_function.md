@@ -57,7 +57,19 @@
 	# 只有被Python解释器直接执行的模块的名字才是__main__
 	# 所以Import module的时候不满足条件，不会执行
 
+一个例子：
 
+	def memory(*args):
+    	print('A Memorable Day in My Life: %d/%d/%d' % (args))
+
+	memory(2016,10,4)  #返回结果：A Memorable Day in My Life: 2016/10/4
+
+	if __name__ == '__main__':
+    	print('Go to sleep now! Stop staying up late.')
+
+### 3.变量作用域
+
+全局变量（global），没有定义在任何一个函数中，属于全局作用域；定义在函数中的局部变量（local），属于局部作用域，在函数的外部并不能访问到它。在实际开发中，我们应该尽量减少对全局变量的使用~
 
 
 

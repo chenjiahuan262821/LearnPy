@@ -28,11 +28,14 @@ def main():
 	stu1.study('php')
 	stu1.love()
 	stu1.dating()
+	stu1.age
+	print(stu1.age)
 
 	stu2 = Student('小欢', 16, '女' )
 	stu2.study('python')
 	stu2.love()
 	stu2.dating()
+	print(stu2.age)
 
 if __name__ == '__main__':
 	main()

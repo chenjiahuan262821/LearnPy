@@ -50,5 +50,8 @@ def main():
     person.age = 999	# 修改
     print(person.age)  #返回：NaN，说明通过@age.setter检查了参数
 
+    person.grade = 90  #随随便便给他加个属性
+    print(person.grade)   #返回：90，还真加上了嘿
+
 if __name__ == '__main__':
     main()

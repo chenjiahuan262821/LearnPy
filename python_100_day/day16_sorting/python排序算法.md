@@ -17,7 +17,7 @@
 算法可以理解为**解决问题的方法和步骤**，评价算法从**渐进时间复杂度和渐进空间复杂度**进行。
 
 
-<img src="https://raw.githubusercontent.com/chenjiahuan262821/LearnPy/master/python_100_day/day16_python/time_complexity.jpg" width="40%" height="40%">
+<img src="https://raw.githubusercontent.com/chenjiahuan262821/LearnPy/master/python_100_day/day16_sorting/time_complexity.jpg" width="40%" height="40%">
 
 
 学到这里的时候，最多是能通过循环的层数区别n的几次方，所以要继续加把劲学，把这些都搞懂~~~
@@ -80,7 +80,7 @@
 
 这里用一张图表达希尔排序的过程：
 
-<img src="https://raw.githubusercontent.com/chenjiahuan262821/LearnPy/master/python_100_day/day16_python/shellSort.jpg" width="40%" height="40%">
+<img src="https://raw.githubusercontent.com/chenjiahuan262821/LearnPy/master/python_100_day/day16_sorting/shellSort.jpg" width="40%" height="40%">
 
 通过增量的设置，希尔排序减少了插入排序中许多无效的比较，所以其时间复杂度较直接插入排序低，低于O(n^2)，它的时间是所取“增量”序列的函数:最好时间复杂度是O(n)，平均时间复杂度： O(1.2^n ~ 1.5^n)，最坏时间复杂度： O(n^2)。
 

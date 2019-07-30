@@ -48,5 +48,3 @@ words = [
 ]
 counter = Counter(words)
 print(counter.most_common(3)) #[('eyes', 8), ('the', 5), ('look', 4)]
-
-print(counter
